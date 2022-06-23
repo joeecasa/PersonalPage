@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif ;
+}
+
+.first-div{
+    background-color: rgb(97, 95, 95);
+    display: flex;
+    justify-content: right;
+    height: 27px;
+    align-items: center;
+}
+.first-div a{
+    margin-right: 5px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
