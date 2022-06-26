@@ -1,0 +1,64 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<main>
+<h1 class="contact-title">Conectemos!</h1>
+<div class="contact-p_contain">
+
+    <p class="contact-p"> Hola ¿Como estas?, Si llegaste hasta aca es por que estas interesado/a en comunicarte conmigo.</p>
+        <p class="contact-p" >
+        Si tenes alguna duda, comentario o pregunta que me quieras hacer podes completar el formulario que dejo mas abajo y recibiras una respuesta en menos de 24 horas.
+        <p class="contact-p" >
+            Tambien, me podes mandar un correo electronico a <a href="mailto:j.casa.marquez@gmail.com">j.casa.marquez@gmail.com</a>
+        </p>
+        <p class="contact-p" >Gracias!</p>
+    </p>
+
+</div>
+<form class="contact-form" action="/contact" method="POST">
+    <label for="name">
+        <input class="contact-form__input" type="text" name="name" placeholder="Nombre y apellido" value="<%= locals.old && old.name ? old.name : ""  %>"> 
+    </label>
+    <% if (locals.errors && errors.name) { %>
+        <p> <%= errors.name.msg %> </p>
+    <% } %>
+    <label for="email">
+        <input class="contact-form__input" type="email" name="email" placeholder="Correo electronico" value="<%= locals.old && locals.email ? old.email : "" %>">
+    </label>
+    <% if (locals.errors && errors.email) { %>
+        <p> <%= errors.email.msg %> </p>
+    <% } %>
+    <label for="msg">
+        <textarea  class="contact-form__input" name="msg"  cols="30" rows="10" placeholder="introduzca su mensaje" value="<%= locals.old && locals.msg ? old.msg : "" %>" ></textarea>
+    </label>
+    <% if (locals.errors && errors.msg) { %>
+        <p> <%= errors.msg.msg %> </p>
+    <% } %>
+    <div class="contact-form__button-contain">
+        <label for="button"> 
+            <button class="contact-form__button" type="submit" name="button" >Enviar</button>
+            
+        </label>
+
+    </div>
+        
+
+
+
+</form>
+
+
+
+
+</main>
+<%- include('./partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+

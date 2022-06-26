@@ -1,75 +1,88 @@
-/*d56630*/naranja
-
-
-
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ubuntu', sans-serif;
 }
+
+main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 /*/////////////header/////////////////*/
-.first-div{
+.first-div {
     display: none;
 }
 
-.sec-div{
+.sec-div {
     align-items: center;
-    background-color:rgba(21,21,21,0.96);
+    background-color: rgba(21, 21, 21, 0.96);
     display: flex;
-    height: 80px;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding-left: 20px;
     padding-right: 20px;
 }
-.p-logo{
+
+.sec-div a {
+    text-decoration: none;
+}
+
+.p-logo {
     align-items: center;
-    background-color: #d56630 ;
+    background-color: #d56630;
     border-radius: 100px;
     display: flex;
     color: white;
     justify-content: center;
     font-size: 25px;
+    max-width: 65px;
     height: 50px;
     width: 65PX;
 }
-.header-title{
+
+.header-title {
     color: white;
     font-size: 25px;
+
 }
 
-.burguer-menu i{
-    color : #d56630;
+.burguer-menu i {
+    color: #d56630;
     font-size: 25px;
-   
-    
+
+
 
 }
-.sec-div{
+
+.sec-div {
     position: relative;
 }
-.nav-header_contain{
-    top: 64px;
+
+.nav-header_contain {
+    top: 84px;
     position: absolute;
     width: 78%;
     display: none;
     z-index: 1;
 }
-.burguer-menu{
+
+.burguer-menu {
     transition: all 1s;
 }
 
 
-.burguer-menu:hover + .nav-header_contain{
-    display: block;   
+.burguer-menu:hover+.nav-header_contain {
+    display: block;
 }
 
-.nav-header{
-    background-color: rgba(21,21,21,0.96);
-    border-top :1px solid #d56630;
- 
+.nav-header {
+    background-color: rgba(21, 21, 21, 0.96);
+    border-top: 1px solid #d56630;
+
 }
 
-.nav-header__li{
-  
+.nav-header__li {
+
     list-style: none;
     padding-bottom: 20px;
     margin-top: 20px;
@@ -79,33 +92,146 @@
     color: white;
     text-decoration: none;
     font-size: 18px;
-    
-    
+
+
 }
+
 @media (min-width: 768px) {
-.first-div{
-    display: flex;
-    background-color: #21211f;
-    height: 50px;
-    margin-bottom: 0px;
-    padding-right: 96px;
-    padding-top: 5px;
-    margin-top: 0px;
-    justify-content: end;
-    align-items: center;
+    .first-div {
+        display: flex;
+        background-color: #21211f;
+        height: 50px;
+        margin-bottom: 0px;
+        padding-right: 96px;
+        padding-top: 5px;
+        margin-top: 0px;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .first-div a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        margin-right: 5px;
+
+
+    }
+
+    .first-div p {
+        margin: 0px;
+        margin-bottom: 5px;
+        margin-right: 16px;
+    }
+
+    .burguer-menu i {
+        display: none;
+    }
+
+    .nav-header_contain {
+        display: block;
+        position: initial;
+        width: 50%;
+    }
+
+    .nav-header {
+        display: flex;
+        width: 100%;
+        padding-left: 0px;
+        border-top: none;
+        background-color: rgb(30, 30, 30);
+        justify-content: space-around;
+    }
+
+    .header-title {
+        text-align: center;
+        width: 30%;
+    }
+
+    .sec-div {
+        height: 100px;
+        position: initial;
+    }
+
+
 
 
 }
-.first-div a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    margin-right: 5px;
+
+
+
+/*///////////404//////////////////*/
+.image-404 img {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+/*///////////404//////////////////*/
+
+/*///////////contact//////////////////*/
+.contact-p_contain{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+   
     
-  
+    
 }
-.first-div p{
-    margin:0px;
-    margin-bottom: 5px;
+.contact-title {
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.contact-p {
+    line-height: 32px;
+    font-size: 20px;
+    max-width: 750px;
+    
+    
+
+}
+.contact-form{
+    margin-left: 15% ;
+    margin-right: 15%;
+
+}
+.contact-form label{
+    text-align: center;
+}
+.contact-form__input {
+    border: none;
+    background-color: #eee;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 750px;
+}
+.contact-form__button{
+    border-radius: 10px;
+    background-color:#d56630;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    transition: all 0.5s;
+    width: 100px;
+}
+.contact-form__button:hover{
+    background-color: white;
+    color:#21211f;
+    font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+    .contact-p_contain{
+       padding-left: 28%;
+    }
+    .contact-form{
+        padding-left: 13%;
+     }
 }
 
 
@@ -113,4 +239,8 @@
 
 
 
-}
+
+
+
+
+/*///////////contact//////////////////*/

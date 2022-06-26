@@ -20,6 +20,8 @@ app.use(express.static(publicPath))
 //permite capturar la información que se envía desde un formulario vía post en req.body
 app.use(express.urlencoded({extended:false}))
 
+
+
 //Configurando EJS
 app.set('view engine', 'ejs')
 
